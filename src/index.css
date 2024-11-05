@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.waves {
+  background: linear-gradient(45deg, #4f46e5, #7c3aed);
+  animation: wave 8s ease infinite;
+  background-size: 400% 400%;
+}
+
+.particles {
+  background: radial-gradient(circle at center, #4f46e5, #000);
+  animation: pulse 4s ease infinite;
+}
+
+.spectrum {
+  background: linear-gradient(90deg, #4f46e5, #7c3aed, #4f46e5);
+  animation: slide 3s linear infinite;
+  background-size: 200% 100%;
+}
+
+@keyframes wave {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes pulse {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+@keyframes slide {
+  0% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
